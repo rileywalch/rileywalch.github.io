@@ -1,0 +1,17 @@
+# Editor and OS
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Temporary / build scripts
+*.py
+*.tmp
+__pycache__/
+
+# Jekyll / Static Site Generation
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

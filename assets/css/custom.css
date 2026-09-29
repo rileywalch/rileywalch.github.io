@@ -1,0 +1,10 @@
+
+/* Grayscale homepage projects */
+.home-page .project-cover .cover__img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+/* User requested they REMAIN grayscale on hover */
+.home-page .project-cover:hover .cover__img {
+    filter: grayscale(100%);
+}
