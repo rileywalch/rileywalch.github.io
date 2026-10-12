@@ -1,4 +1,52 @@
 
+/* =====================================================
+   CRITICAL OVERRIDES (Adobe Portfolio JS not present)
+   Adobe's main.js would normally:
+   1. Add .transition-in to body (making it visible)
+   2. Load lazy images via data-src
+   Without it, we override those behaviors here.
+   ===================================================== */
+
+/* Force body to be visible (Adobe's CSS hides it at opacity:0 waiting for JS) */
+body {
+    opacity: 1 !important;
+}
+
+/* Ensure cover images always render (bypass lazy-load state) */
+.cover__img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure project covers always show */
+.project-cover {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Fix project grid sizing that was JS-driven */
+.project-covers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-cover {
+    width: 33.333%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .project-cover { width: 50%; }
+}
+
+@media (max-width: 540px) {
+    .project-cover { width: 100%; }
+}
+
+/* =====================================================
+   GRAYSCALE HOMEPAGE
+   ===================================================== */
+
 /* Grayscale homepage projects */
 .home-page .project-cover .cover__img {
     filter: grayscale(100%);
