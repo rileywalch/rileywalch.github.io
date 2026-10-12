@@ -24,6 +24,24 @@ body {
     visibility: visible !important;
 }
 
+/* Ensure individual project galleries and images always show */
+.grid--main {
+    visibility: visible !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.grid__item-container {
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100% !important;
+}
+
+.grid__item-image {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 /* Fix project grid sizing that was JS-driven */
 .project-covers {
     display: flex;
